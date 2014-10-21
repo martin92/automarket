@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %} Login {% endblock %}
+{% block content %} 
+
+<p><h4>Iniciar Sesion:</p></h4>
+
+	<form action = '.' method = "POST">
+		{% csrf_token %}
+		{{mensaje}}
+		
+		{{form.as_p}}
+	<input type = "Submit" value = "Enviar" class = "btn btn-primary"/>
+	</form>
+
+{% endblock %}

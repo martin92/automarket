@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block title %} Mis Calificaciones {% endblock %}
+{% block content %} 
+
+
+{% if a %}
+<h1>Mis Calificaciones:</h1>
+<br>
+<table class = "table  table-hover">
+	<thread>
+		<tr>
+			<th>Usuario Calificado:</th>
+			<th>Usuario Calificador:</th>
+			<th>Calificacion:</th>
+			<th>Motivo:</th>
+		</tr>
+	</thread>
+{% for Calificacion in a %}
+<tbody>
+	<tr>
+		<td>{{Calificacion.UsuarioCalificado}}</a>
+		<td>{{Calificacion.UsuarioCalificador}}</td>
+		<td>{{Calificacion.Calificacion}}</a>
+		<td>{{Calificacion.Motivo}}</a></td>
+</tbody>
+{% endfor %}
+</table>
+{% else %}
+	Usted no ha sido calificado por ningun Usuario
+{% endif %}
+
+
+
+{% endblock %}

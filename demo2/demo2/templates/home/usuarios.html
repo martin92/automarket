@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %} Crear Perfil {% endblock %}
+{% block content %}
+
+<p><h3>Crear Perfil:</p></h3>
+<div id = 'text'>
+<form enctype="multipart/form-data" action = '.' method = "Post">
+	{% csrf_token %}
+	{{form.as_p}}
+	<input type = "Submit" value = "Enviar"/>
+</form>
+</div>
+
+
+{% endblock %}
+

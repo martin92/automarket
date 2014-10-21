@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title %} Ver Perfil {% endblock %}
+{% block content %} 
+<p><h1>Mi perfil</h1></p>
+<p><h3>Datos de {{datos.user}}</p></h3>
+<table class = "table  table-hover">
+	<thread>
+		<tr>
+			<th><center>Foto</center></th>
+			<th>Datos</th>
+		</tr>
+	</thread>
+<tbody>
+	<tr>
+		<td><br><center><img class = "imgperfil" src = '{{datos.Foto.url}}' width = "200"/></a></center></td>
+		<td><strong>Nombre de Usuario:</strong> {{datos.user}}
+		<br><strong>Telefono:</strong> {{datos.Telefono}}
+		<br><strong>Pagina Web:</strong> {{datos.Webpage}}
+		<br><strong>Descripcion:</strong> {{datos.Descripcion}}
+		<br><strong>Nombre:</strong> {{datos.Nombre}}
+		<br><strong>Apellido Paterno:</strong> {{datos.ApellidoP}}
+		<br><strong>Apellido Materno:</strong> {{datos.ApellidoM}}
+		<br><strong>Estado:</strong> {{datos.Estado}}
+		<br><strong>Ciudad:</strong> {{datos.Ciudad}}
+</tbody>
+</table>
+{% endblock %}

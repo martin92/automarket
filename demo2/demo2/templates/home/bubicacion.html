@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% block title %} Busqueda por Ubicacion {% endblock %}
+{% block content %} 
+
+
+<h3>Busquedas</h3> 
+
+	<form action="" method="GET">
+
+			<label for="q">Ubicacion: </label>
+				<input type = "text" name = "q">
+				<br>
+				<input type="submit" value="Buscar" class = "btn btn-info"> 
+	</form>
+
+  
+
+  {% if base %} 
+
+  	{% if results %} 
+ 	<div id = 'text'>
+  		<table class = "table  table-hover">
+				<thread>
+					<tr>
+						<th>Foto</th>
+						<th>Vendedor</th>
+
+					</tr>
+				</thread>
+
+  		{% for autos in results %} 
+
+			<tbody>
+				<tr>
+					<td><a href = "/anuncios/numero/{{ autos.Id_anuncio }}/"><img class = "img2" src = '{{autos.Foto.url}}' width = "200"/></a></td>
+					<td>
+						<br><strong>Vendedor:</strong> {{autos.Usuario}}
+						<br><strong>No.Serie:</strong> {{autos.Num_Serie}}
+						<br><strong>Marca:</strong> {{autos.Marca}}
+						<br><strong>Modelo:</strong> {{autos.Modelo}}
+						<br><strong>Descripcion:</strong> {{autos.Comentarios}}</a>
+						<br><strong>Fecha:</strong> {{autos.Fecha}}</a>
+						<br><strong>Anio:</strong> {{autos.Year}}</a>
+						<br><strong>Precio:</strong> {{autos.Precio}}</a>
+						<br><strong>Ubicacion:</strong> {{autos.Ubicacion}}</a>
+						<br><strong>Visitas:</strong> {{autos.Visitas}}</a>
+					</td>
+
+				</tr>
+			</tbody>
+			
+
+  		{% endfor %}
+  		</table>
+  		</div> 
+ 		{% else %} 
+ 			<p>No se encontraron resultados.</p> 
+ 	{% endif %}
+
+ {% endif %} 
+
+
+
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block title %} Anuncio {{auto.Id_anuncio}} {% endblock %}
+{% block content %} 
+
+
+<table class = "table  table-hover">
+	<thread>
+		<tr>
+			<th>Foto</th>
+			<th>Datos</th>
+		</tr>
+	</thread>
+<tbody>
+	<tr>
+		<td><img class = "imgcarros" src = '{{auto.Foto.url}}' width = "600"/>
+			<br>
+			<br>
+			<p>{{auto.Comentarios}}</p>
+		</td>
+		
+		<td><strong>Vendedor:</strong> {{auto.Usuario}} </a>
+		<br><strong>No.Serie:</strong> {{auto.Num_Serie}}
+		<br><strong>Marca:</strong> {{auto.Marca}}
+		<br><strong>Modelo:</strong> {{auto.Modelo}}
+		<br><strong>Anio:</strong> {{auto.Year}}
+		<br><strong>Transmision:</strong> {{auto.Transmision}}
+		<br><strong>Cilindros:</strong> {{auto.Cilindros}}
+		<br><strong>Combustible:</strong> {{auto.Combustible}}
+		<br><strong>Puertas:</strong> {{auto.Puertas}}
+		<br><strong>Color:</strong> {{auto.Color}}
+		<br><strong>Precio:</strong> {{auto.Precio}}
+		<br><strong>Ubicacion:</strong> {{autos.Ubicacion}}</a>
+		<br><strong>Visitas:</strong> {{auto.Visitas}}
+	</td>
+
+
+</tbody>
+</table>
+<br><a class="btn btn-primary" href="/visto/numero/{{auto.Id_anuncio}}" role="button">Regresar</a>
+
+{% if user.is_authenticated %}
+
+<br><br><a class="btn btn-danger" href="/reportado/numero/{{auto.Id_anuncio}}" role="button">Reporta este Anuncio</a>
+{% endif %}
+{% endblock %}

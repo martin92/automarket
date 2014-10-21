@@ -1,0 +1,47 @@
+
+body {
+
+  	background-image: url(/media/images/sky.jpg);
+  	background-size: 100%;
+  
+}
+		
+.container {
+    position:absolute;
+    bottom:0;
+    margin: 0 5px 5px 5px;
+    width: 200px; 
+    width: 100%;  
+}
+
+/*
+SCROLL BAR DE ANUNCIOS
+*/
+#text {
+
+	width: 900px;
+	height: 450px;
+	overflow: auto;
+
+}
+
+/*
+REDONDEO DE FOTOS
+*/
+.img {
+border-radius: 50px;
+}
+
+.imgperfil {
+border-radius: 20px;
+}
+
+.imgcarros {
+border-radius: 10px;
+}
+
+/*BOTONES EN LA MISMA LINEA*/
+.boton {
+
+  background-color: #4C0B5F;
+}

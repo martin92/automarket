@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %} Contacto {% endblock %}
+{% block content %} 
+
+<p><h4>Contacto:</p></h4>
+
+<form action = '.' method = "Post">
+{% csrf_token %}
+{{form.as_p}}
+<input type = "Submit" value = "Enviar" class = "btn btn-primary"/>
+</form>
+
+{% endblock %}
